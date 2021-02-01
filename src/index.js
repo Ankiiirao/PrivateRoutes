@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter ,Switch} from 'react-router-dom';
+import Private from '../src/components/Authentication/Private'
+import  Public from '../src/components/Authentication/Public'
+import Login from './signin'
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
+  <React.Fragment>
+    <BrowserRouter>
+    <Switch>
+        <Public path="/login" component={Login}/>
+        <Private path="/" component={App} />
+    </Switch>
+    </BrowserRouter>
+  </React.Fragment>,
   document.getElementById('root')
 );
 
