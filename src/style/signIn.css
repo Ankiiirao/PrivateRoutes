@@ -1,0 +1,13 @@
+.Sign-In{
+    height:100%;
+    width: 50%;
+     border:1px solid black;
+     display:flex;
+     flex-direction:column;
+     justify-content:space-around;
+     padding:1rem;
+     margin:auto;
+}
+.inpt{
+    margin:0.7rem 0rem 0.7rem 0
+}
