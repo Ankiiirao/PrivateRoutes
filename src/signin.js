@@ -1,15 +1,17 @@
-import React,{useState,useEffect} from 'react'
-import { Redirect } from 'react-router-dom'
+import React,{useState,useEffect,} from 'react'
+import {Link,useHistory} from 'react-router-dom'
 import './style/signIn.css'
 export default function SignIn() {
     const [place,setPlace]=useState(false)
+    const history = useHistory()
     const setting = () =>{
         localStorage.setItem("token","{name:ankita}")
         setPlace(true)
+        // history.push('/')
     }
     useEffect(() => {
         console.log("22222222222222222222")
-            place?<Redirect to='/Dashboard'/>:console.log("________________________________")
+            place?history.push('/'):console.log("________________________________")
     }, [place])
   
     return (

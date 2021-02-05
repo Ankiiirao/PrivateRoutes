@@ -11,6 +11,7 @@ ReactDOM.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
+  <React.StrictMode>
   <React.Fragment>
     <BrowserRouter>
     <Switch>
@@ -18,7 +19,8 @@ ReactDOM.render(
         <Private path="/" component={App} />
     </Switch>
     </BrowserRouter>
-  </React.Fragment>,
+  </React.Fragment>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

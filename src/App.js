@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <div>
+        <>
           <h1>Hello</h1>
           <div>
             {window.location.pathname=='/'&& <Redirect to='/Dashboard'/>}
@@ -17,7 +17,7 @@ function App() {
           <Route path="/Home" component={Home}/>
           </div>
           <h1>welcome</h1>
-        </div>
+        </>
       </Switch>
     </Router>
   );
