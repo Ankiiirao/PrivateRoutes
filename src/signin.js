@@ -1,16 +1,17 @@
 import React,{useState,useEffect,} from 'react'
-import {Link,useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import './style/signIn.css'
-export default function SignIn() {
+export default function SignIn(props) {
     const [place,setPlace]=useState(false)
+    console.log(props)
     const history = useHistory()
     const setting = () =>{
         localStorage.setItem("token","{name:ankita}")
         setPlace(true)
-        // history.push('/')
     }
     useEffect(() => {
-        console.log("22222222222222222222")
+        document.title="Sign In"
+       
             place?history.push('/'):console.log("________________________________")
     }, [place])
   
